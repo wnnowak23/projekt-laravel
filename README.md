@@ -45,4 +45,4 @@ FILMIK CZĘŚĆ 5
 1) pobranie biblioteki za pomocą komendy    composer require laravel/ui:^4.1.0
 2) pobranie komponentu bootstrapa za pomocą komendy    php artisan ui bootstrap --auth
 
-FILMIK NR 5 DO 17:30 - PROBLEM Z DZIAŁANIEM LOG IN/REGISTER
+FILMIK NR 5 DO 17:30 - PROBLEM Z DZIAŁANIEM LOG IN/REGISTER błąd w Vite manifest not found at: C:\xampp\htdocs\projekt\public\build/manifest.json
