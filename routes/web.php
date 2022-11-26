@@ -25,5 +25,12 @@ Route::get('/', function () {
 
 Route::get('/hello', [HelloWorldController::class, 'show']);
 
-Auth::routes()
+Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
