@@ -33,24 +33,9 @@
 </div>
 @endsection
 @section('javascript')
-$(function() {
-  $('.delete').click(function() {
-    $.ajax({
-      method: "DELETE",
-      url: "http://sklep.test/users/" + $(this).data("id")
-      
-    })
+const deleteUrl = "{{ url('users') }}/";
+@endsection
 
-    .done(function(response){
-      alert("Success");
-      window.location.reload();
-    })
-
-    .fail(function(response){
-      alert("Error");
-    });
-
-  });
-});
-
+@section('js-files')
+@vite(['resources/js/delete.js'])
 @endsection
