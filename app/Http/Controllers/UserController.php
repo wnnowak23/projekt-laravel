@@ -84,7 +84,11 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    { 
+    $flight = User::find($id);
+    $flight->delete();
+    return response()->json([
+        'status' => 'success'
+    ]);
     }
 }

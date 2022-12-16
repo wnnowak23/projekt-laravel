@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/js/app.js'])
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -78,5 +78,10 @@
             @yield('content')
         </main>
     </div>
+    @vite(['resources/js/app.js'])
+    <script type="text/javascript">
+    @yield('javascript')
+    
+    </script>
 </body>
 </html>

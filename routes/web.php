@@ -25,6 +25,7 @@ Route::get('/', function () {
 
 Route::get('/hello', [HelloWorldController::class, 'show']);
 Route::get('/users/list', [UserController::class, 'index'])->middleware('auth');
+Route::delete('/users/{id}', [UserController::class, 'destroy'])->middleware('auth');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
