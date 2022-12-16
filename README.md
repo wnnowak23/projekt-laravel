@@ -1,8 +1,11 @@
 ****************************
-UPDATE 16.12 v3
+UPDATE 16.12 v4
 ***************************
 
-FILMIK CZĘŚĆ 17
+FILMIK CZĘŚĆ 18
 
-1) obsługa wyskakiwania okien przy usuwaniu (cczy jestes pewny ze chcesz usunac)
-2)rozdzielenie funkcji usuwania z index blade
+1) dodanie wyswietlania listy produktow
+2) dodanie opcji dodawania produktow
+3) dodanie opcji edycji produktow
+4) dodanie opcji usuwania produktow
+5) dodanie opcji wyswietlania produktow
