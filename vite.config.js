@@ -7,6 +7,7 @@ export default defineConfig({
         laravel([
             
                 'resources/js/app.js',
+                'resources/js/delete.js',
            
         
     ])
