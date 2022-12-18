@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-6">
-     <h1> Lista produktów</h1>
+     <h1>  {{ __('shop.product.index_title') }} </h1>
     </div>
     <div class="col-6">
       <a class="float-right" href="{{ route ('products.create') }}">
@@ -60,6 +60,7 @@
 @endsection
 @section('javascript')
 const deleteUrl = "{{ url('products') }}/";
+const confirmDelete ="{{ __('shop.messages.delete_confirm')}}";
 @endsection
 
 @section('js-files')

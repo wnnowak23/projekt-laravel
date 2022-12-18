@@ -1,7 +1,7 @@
 $(function() {
     $('.delete').click(function() {
       Swal.fire({
-            title: 'Czy na pewno chcesz usunąć rekord?',
+            title: confirmDelete,
             text: 'Pamiętaj, że nie możesz tego cofnąć!',
             icon: 'warning',
             showCancelButton: true,
