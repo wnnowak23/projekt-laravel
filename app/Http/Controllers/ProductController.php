@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\View;
+use App\Models\ProductCategory;
+
 
 class ProductController extends Controller
 {
@@ -27,8 +29,11 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view("products.create");
+        return view("products.create", [
+            'categories' => ProductCategory::all()
+        ]);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -46,6 +51,7 @@ class ProductController extends Controller
         $product->save();
         return redirect(route('products.index'));
     }
+
 
     /**
      * Display the specified resource.
@@ -69,7 +75,8 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         return view("products.edit", [
-            'product'=> $product
+            'product'=> $product,
+            'categories' => ProductCategory::all()
         ]);
     }
 

@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label for="amount" class="col-md-4 col-form-label text-md-end">I{{ __('shop.product.fields.amount') }}lość</label>
+                        <label for="amount" class="col-md-4 col-form-label text-md-end">{{ __('shop.product.fields.amount') }}</label>
 
                     <div class="col-md-6">
                         <input id="amount" type="number" min="0" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ $product->amount }}" required autocomplete="amount" autofocus>
@@ -66,6 +66,29 @@
                                 @enderror
                             </div>
                         </div>
+
+                        <div class="row mb-3">
+                            <label for="category" class="col-md-4 col-form-label text-md-end">{{ __('shop.product.fields.category') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="price" class="form-control @error('category_id') is-invalid @enderror" name="category_id">
+                                    <option value="">Brak</option>
+                                     @foreach ($categories as $category)
+                                     <option value="{{ $category->id }}" @if($product->isSelectedCategory($category->id)) selected @endif> {{ $category->name }} </option>
+                                     @endforeach
+                                </select>
+
+                                @error('category_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+
+
 
                         <div class="row mb-3">
                             <label for="image" class="col-md-4 col-form-label text-md-end">{{ __('shop.product.fields.image') }}</label>
