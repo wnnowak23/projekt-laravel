@@ -1,11 +1,7 @@
 ****************************
-UPDATE 16.12 v4
+UPDATE 18.12 v3
 ***************************
 
-FILMIK CZĘŚĆ 18
+FILMIK CZĘŚĆ 21
 
-1) dodanie wyswietlania listy produktow
-2) dodanie opcji dodawania produktow
-3) dodanie opcji edycji produktow
-4) dodanie opcji usuwania produktow
-5) dodanie opcji wyswietlania produktow
+1) dodanie jezyka polskiego - tłumaczenie automatyczne wszytskiego na polski
