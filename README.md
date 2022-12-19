@@ -1,11 +1,9 @@
 ****************************
-UPDATE 16.12 v4
+UPDATE 18.12 v2
 ***************************
 
-FILMIK CZĘŚĆ 18
+FILMIK CZĘŚĆ 19
 
-1) dodanie wyswietlania listy produktow
-2) dodanie opcji dodawania produktow
-3) dodanie opcji edycji produktow
-4) dodanie opcji usuwania produktow
-5) dodanie opcji wyswietlania produktow
+1) upload plikow 
+
+OMINELAM PRZYPADKOWO FILMIK NR 20 - TRZEBA NADROBIC
