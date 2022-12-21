@@ -1,7 +1,7 @@
 ****************************
-UPDATE 19.12
+UPDATE 21.12
 ***************************
 
-FILMIK CZĘŚĆ 22
+FILMIK CZĘŚĆ 20 (wcześniej 22, ten był ominięty)
 
-1) cały filmik: dodaniekategorii, relacji
+1) cały: walidacja formularza na backendzie, refaktoryzacja.
