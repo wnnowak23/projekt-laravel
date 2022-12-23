@@ -1,7 +1,7 @@
 ****************************
-UPDATE 21.12
+UPDATE 23.12
 ***************************
 
-FILMIK CZĘŚĆ 20 (wcześniej 22, ten był ominięty)
+FILMIK CZĘŚĆ 23 
 
-1) cały: walidacja formularza na backendzie, refaktoryzacja.
+1) cały: dodawanie seedera, modyfikacja i ogarniecie palenu bocznego i wyswietlanie kategorii
