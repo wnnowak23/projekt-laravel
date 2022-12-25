@@ -22,7 +22,7 @@ class Product extends Model
        'price',
        'category_id'
        
-       
+        
    ];
 
    public function category()
@@ -30,18 +30,15 @@ class Product extends Model
        return $this->belongsTo(ProductCategory::class);
    }
 
-   public function isSelectedCategory(int $category_id)
-   {
-    return $this->hasCategory() && $this->category->id == $category_id;
+   public function isSelectedCategory(int $category_id): bool
+    {
+        return $this->hasCategory() && $this->category->id == $category_id;
+    }
 
-   }
-
-
-   public function hasCategory()
-   {
-    return !is_null($this->category);
-
-   }
+    public function hasCategory(): bool
+    {
+        return !is_null($this->category);
+    }
 }
 
 
