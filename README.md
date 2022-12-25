@@ -1,20 +1,8 @@
 ****************************
-UPDATE 25.12 v3
+UPDATE 25.12 v4
 ***************************
 
-1) weryfikacja adresu email za pomoca strony mailtrap
-2)trzeba dokonac zmiany pliku .env:
-MAIL_MAILER=smtp
-MAIL_HOST=smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=7abd004e96abad
-MAIL_PASSWORD=b7fd778f24cbde
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS="weronisia-1199@wp.pl"
-MAIL_FROM_NAME="${APP_NAME}"
+1) zrobilam caly filmik - dodawanie komunikatow typu - dodano produkt/zaktualizowano produkt itp itd - dotyczy powiadomien dotyczacych i uzytkownikow i produktow.
 
-zalogowalam sie na swojego maila na ta stronke. konto ktore jest juz po weryfikacji to
-email testowe@wp.pl
-haslo testowe123
-
-w innym przypadku trzeba sie zalogowac na mailtrap na konto to moje w tym przypadku (jesli bedziesz chciala sie zalogowac to mi napisz na priv) i tam to zweryfikowac
+pojawily sie male problemy - laravel nie potrafi wyszukac widoku z helpers/flash-messages - dlatego po prostu wyswietlanie powiadomienia jest napisane osobno w plikach inde usera i produktow- po prostu zamiast jednej linijki kodu odnoszacej sie do pliku flash-messages sa napisane dwie formuly w dowch plikach
+dodatkowo nie dzialal krzyzyk zamykajacy powiadomienie, ale poszperalam w necie i musialam cos tam zmienic i dziala zamykanie

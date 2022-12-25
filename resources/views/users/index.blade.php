@@ -2,6 +2,24 @@
 
 @section('content')
 <div class="container">
+  <div class="container">
+    @if (session('status'))
+  <div class="row"> 
+    <div class="col-12">
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>        
+          {{ session('status') }}
+      </div>
+    </div>
+  </div>
+@endif
+    <div class="row">          
+      <div class="col-6">
+       <h1>  {{ __('shop.user.index_title') }} </h1>
+      </div>
+      
+    </div>
 <table class="table table-striped">
     <thead>
       <tr>
@@ -35,6 +53,7 @@
 @section('javascript')
 
 const deleteUrl = "{{ url('users') }}/";
+const confirmDelete ="{{ __('shop.messages.delete_confirm')}}";
 @endsection
 
 @section('js-files')

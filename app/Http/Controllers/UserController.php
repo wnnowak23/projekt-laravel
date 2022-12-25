@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Exception;
+use Session;
 
 class UserController extends Controller
 {
@@ -91,6 +92,7 @@ class UserController extends Controller
         try {
             //throw new Exception();
             $user->delete();
+            Session::flash('status', __('shop.user.status.delete.success'));
     return response()->json([
         'status' => 'success'
     ]);
