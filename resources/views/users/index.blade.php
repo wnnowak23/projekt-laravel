@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 <div class="container">
   <div class="container">
     @if (session('status'))
@@ -16,7 +18,7 @@
 @endif
     <div class="row">          
       <div class="col-6">
-       <h1>  {{ __('shop.user.index_title') }} </h1>
+       <h1> <i class="fa fa-users"></i> {{ __('shop.user.index_title') }} </h1>
       </div>
       
     </div>
@@ -40,8 +42,8 @@
             <td>{{ $user->surname }}</td>
             <td>{{ $user->phone_number }}</td>
             <td>
-              <button class="btn btn-danger bt-sm delete" data-id="{{ $user->id }}">
-                X
+              <button class="btn btn-danger bt-sm delete" data-id="{{ $user->id }}"><i class="fa fa-square-minus"></i>
+                
             </td>
         </tr>
         @endforeach
