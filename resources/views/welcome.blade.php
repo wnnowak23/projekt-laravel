@@ -21,13 +21,13 @@
                                 <button type="button" class="btn btn-lg btn-light"> <span class="fa fa-arrow-left"></span> </button>
                                 <button type="button" class="btn btn-lg btn-light"> <span class="fa fa-arrow-right"></span> </button>
                             </div>
-                            <div class="dropdown float-right">
-                                <a class="btn btn-lg btn-light dropdown-toggle products-actual-count" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">5<span class="caret"></span></a>
+                            <div class="dropdown">
+                                <a class="btn btn-lg btn-light dropdown-toggle products-actual-count" data-bs-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false" >5</a>
                                 <div class="dropdown-menu dropdown-menu-right products-count" aria-labelledby="navbarDropdown" x-placement="bottom-end" style="will-change: transform; position: absolute; transform: translate3d(120px, 48px, 0px); top: 0px; left: 0px;">
-                                    <a class="dropdown-item" href="#">5</a>
-                                    <a class="dropdown-item" href="#">10</a>
-                                    <a class="dropdown-item" href="#">15</a>
-                                    <a class="dropdown-item" href="#">20</a>
+                                   <a class="dropdown-item" href="#">5</a>
+                                        <a class="dropdown-item" href="#">10</a>
+                                             <a class="dropdown-item" href="#">15</a>
+                                                <a class="dropdown-item" href="#">20</a>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                 <button type="button" class="btn btn-lg btn-light"> <span class="fa fa-arrow-right"></span> </button>
                             </div>
                             <div class="dropdown float-md-right">
-                                <a class="btn btn-light btn-lg dropdown-toggle products-actual-count"data-bs-toogle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">5<span class="caret"></span></a>
+                                <a class="btn btn-light btn-lg dropdown-toggle products-actual-count" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">5<span class="caret"></span></a>
                                 <div class="dropdown-menu products-count" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">5</a>
                                     <a class="dropdown-item" href="#">10</a>
@@ -103,10 +103,14 @@
  @endsection
 
  @section('javascript')
+
   const storagePath = '{{ asset('storage') }}/';
   const defaultImage = '{{ $defaultImage }}';
  @endsection
 
  @section('js-files')
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
  @vite(['resources/js/welcome.js'])
  @endsection
