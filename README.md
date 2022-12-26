@@ -1,14 +1,9 @@
 ****************************
-UPDATE 25.12 v6
+UPDATE 26.12
 **************************
 
-Filmik 29
-1) robienie usera i admina - trzeba jeszcze dodac moderatora, ale na ten moment nie wiem jaki widok moglby miec, moze zeby widzial liste produktow tylko, ale bez listy uzytkownikow? kwestia do dogadania
+UWAGA UWAGA UWAGA
+Robilam Filmik 30, zrobilam tylko pierwsza czesc filmiku:
+1) dodanie przycisku do koszyka - jesli jestes niezalogowany to nie bedzie mozna go kliknac
 
-DANE DO LOGOWANIA DO ADMINA:
-admin@wp.pl
-testowe123
-
-DANE DO LOGOWANIA DO USERA:
-user@wp.pl
-testowe123
+Potem czesc dodawania do koszyka nie dzialala. gosciu mowil ze bedzie robil refaktoryzacje, wiec dlugo bledu nie szukalam i zaczelam poprawiac kod razem z nim, czyli FILMIK NR 33!!!!!!. teraz wszystko ladnie dodaje do koszyka!

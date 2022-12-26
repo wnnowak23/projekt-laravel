@@ -7,7 +7,7 @@ $(function() {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Tak, usuń.',
+            confirmButtonText: 'Tak, usuń',
             cancelButtonText: 'Anuluj'
   }).then((result) => {
     if (result.value) {

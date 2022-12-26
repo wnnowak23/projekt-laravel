@@ -53,7 +53,10 @@
                                             <i>PLN {{ $product->price }}</i>
                                         </h5>
                                     </div>
-                                   
+                                    <button class="btn btn-success btn-sm add-cart-button" data-id="{{$product->id}}" @guest disabled @endguest> 
+                                        <i class="fa fa-plus"></i> 
+                                        Dodaj do koszyka
+                                    </button>
                                 </div>
                             </div>
                         @endforeach
@@ -61,7 +64,7 @@
                     <div class="row sorting mb-5 mt-5">
                         <div class="col-12">
                             <a class="btn btn-light">
-                                <i class="fas fa-arrow-up mr-2"></i> Back to top</a>
+                                <i class="fa fa-arrow-up mr-2"></i> Back to top</a>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-lg btn-light"> <span class="fa fa-arrow-left"></span> </button>
                                 <button type="button" class="btn btn-lg btn-light"> <span class="fa fa-arrow-right"></span> </button>
@@ -105,9 +108,13 @@
  @endsection
 
  @section('javascript')
+  const WELCOME_DATA = {
+     storagePath: '{{ asset('storage') }}/',
+     defaultImage: '{{ $defaultImage }}',
+     addToCart: '{{ url('cart') }}/'
 
-  const storagePath = '{{ asset('storage') }}/';
-  const defaultImage = '{{ $defaultImage }}';
+  }
+ 
  @endsection
 
  @section('js-files')
