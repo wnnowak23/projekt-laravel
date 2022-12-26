@@ -50,7 +50,6 @@ class CartItem {
         return $this->name;
     }
 
-
     /**
      * Get the value of price
      * @return float
@@ -59,7 +58,6 @@ class CartItem {
     {
         return $this->price;
     }
-
 
 
     /**
@@ -89,6 +87,10 @@ class CartItem {
 
     public function getSum() {
         return $this->price * $this->quantity;
+    }
+
+    public function getImage() {
+        return !is_null($this->imagePath) ? asset("storage/" . $this->imagePath) : config("shop.defaultImage");
     }
 
     public function addQuantity(Product $product): CartItem 

@@ -45,10 +45,10 @@ Route::middleware(['auth', 'verified'])->group(function(){
         Route::delete('/users/{user}', [UserController::class, 'destroy']);
     });
 
-    Route::get('/cart/list', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
-    Route::post('/cart/{product}', [App\Http\Controllers\CartController::class, 'store'])->name('cart.store');
-    
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/{product}', [CartController::class, 'store'])->name('cart.store');
+    Route::delete('/cart/{product}', [CartController::class, 'destroy'])->name('cart.destroy');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
 Auth::routes(['verify' => true]);

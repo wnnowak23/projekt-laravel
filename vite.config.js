@@ -10,6 +10,8 @@ export default defineConfig({
                 'resources/js/delete.js',
                 'resources/js/welcome.js',
                 'resources/js/bootstrap.js',
+                'resources/sass/ap.scss',
+                'resources/css/cart.css',
            
         
     ])

@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\ValueObjects\Cart;
 use App\ValueObjects\CartItem;
 use App\Models\Product;
-use Illuminate\Support\aRR;
 use Illuminate\Support\Facades\Session;
 use Illuminate\View\View;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Exception;
 
 
 class CartController extends Controller
@@ -19,7 +19,12 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //dd(Session::get('cart', new Cart()));
+        //return view('home');
+        return view('cart.index', [
+            'cart' => Session::get('cart', new Cart())
+            
+        ]);
     }
 
      /**
@@ -34,5 +39,26 @@ class CartController extends Controller
         return response()->json([
             'status' => 'success'
     ]);
+    }
+
+
+    public function destroy(Product $product)
+    {
+        try {
+            $cart = Session::get('cart', new Cart());
+            Session::put('cart', $cart->removeItem($product));
+            Session::flash('status', __('shop.product.status.delete.success'));
+            return response()->json([
+                'status' => 'success'
+            ]);
+        }
+        catch (Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Wystąpił błąd!'
+
+            ])->setStatusCode(500);
+        }
+    
     }
 }
