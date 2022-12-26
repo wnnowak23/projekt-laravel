@@ -1,9 +1,11 @@
 ****************************
-UPDATE 26.12
+UPDATE 26.12 v2
 **************************
 
 UWAGA UWAGA UWAGA
-Robilam Filmik 30, zrobilam tylko pierwsza czesc filmiku:
-1) dodanie przycisku do koszyka - jesli jestes niezalogowany to nie bedzie mozna go kliknac
+ Filmik 31 - tutaj w sumie nie bylo nic niezbednego ale zrobilam. trzeba w .env dodac linjke kodu 
+ SHOP_DEFAULT_IMAGE=https://via.placeholder.com/240x240/5fa9f8/efefef
+ utworzylismy takze nowy plik w folderze config - shop.php i zmielismy w welcomecontrollerze linijke, ktora odpowiada za wyswietlanie tego basic zdjecia jesli w produkcie nic go nie doda
+ " 'defaultImage' => config('shop.defaultImage')" - zmiana w pliku welcomecontroller
 
-Potem czesc dodawania do koszyka nie dzialala. gosciu mowil ze bedzie robil refaktoryzacje, wiec dlugo bledu nie szukalam i zaczelam poprawiac kod razem z nim, czyli FILMIK NR 33!!!!!!. teraz wszystko ladnie dodaje do koszyka!
+ generalnie tak jak napisala, kompletnie nic niezbednego, moglby byc ten filmik nawet pominiety :D
