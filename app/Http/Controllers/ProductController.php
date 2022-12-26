@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use Illuminate\Http\Request;
-use App\Http\Controllers\View;
-use App\Models\ProductCategory;
 use App\Http\Requests\UpsertProductRequest;
-use Session;
+use App\Models\Product;
+use App\Models\ProductCategory;
+use Exception;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 
 class ProductController extends Controller
@@ -91,18 +98,25 @@ class ProductController extends Controller
      */
     public function update(UpsertProductRequest $request, Product $product)
     {
+        $oldImagePath = $product->image_path;
+        
         $product->fill($request->validated());
 
         if ($request->hasFile('image')) {
-            $product->image_path = $request->file('image')->store('products');
 
+            if (Storage::exists($oldImagePath)) {
+                Storage::delete($oldImagePath);
+
+            }
+
+            $product->image_path = $request->file('image')->store('products');
         }
 
         $product->save();
         return redirect(route('products.index'))->with('status', __('shop.product.status.update.success'));
     
     }
-
+ 
     /**
      * Remove the specified resource from storage.
      *
@@ -126,6 +140,27 @@ class ProductController extends Controller
 
             ])->setStatusCode(500);
         }
+    
+    }
+
+
+
+    /**
+     * Download image of the specified resource in storage.
+     *
+     * @param  Product  $product
+     * @return RedirectResponse
+     */
+    public function downloadImage(Product $product)
+    {
+
+            if (Storage::exists($product->image_path)) {
+                return Storage::download($product->image_path);
+           }
+
+        
+
+        return Redirect::back();
     
     }
     

@@ -14,7 +14,7 @@
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('shop.product.fields.name') }}</label>
-
+ 
                             <div class="col-md-6">
                                 <input id="name" type="text" maxlenght="500" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $product->name }}" required autocomplete="name" autofocus>
 
@@ -106,10 +106,14 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-md-6">
-                               <img src="{{ asset('storage/' . $product->image_path)}}" alt="Zdjęcie produktu">
+                        <div class="row mb-3">
+                            <div class="offset-md-4 col-md-6">
 
+                                @if(!is_null($product->image_path))
+                            <a href="{{ route('products.downloadImage', $product->id) }}">
+                            <img src="{{ asset('storage/' . $product->image_path)}}" alt="Zdjęcie produktu">
+                            </a>
+                                @endif
                                
                             </div>
                         </div>
