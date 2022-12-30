@@ -16,7 +16,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 try {
     window.Swal = require('sweetalert2');
-
+    window.$.ajaxSetup({
+        headers:{
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
 } catch (e) {}
 
