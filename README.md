@@ -1,9 +1,7 @@
 ****************************
-UPDATE 1.12
+UPDATE 2.12
 **************************
 
-Filmik 36
-1) cały czas wywala mi blad csrf -> w kodzie wszystkojest alenadaljest zakomentowane, potem sie tym zajme
+Filmik 38 i 39 pominiety
 
-FILMIK 37
-1) realizacja zamowien, odblokowanie przycisku przejdz do platnosci, wyswietlenie calej listy zamowien, ilosci,ceny i produtkow
+1) zmiana kategorii i usuniecie niepotrzebych rzeczy - wersja stabilna
