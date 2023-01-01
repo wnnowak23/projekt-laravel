@@ -1,6 +1,9 @@
 ****************************
-UPDATE 29.12
+UPDATE 1.12
 **************************
 
-Filmik 35
-1) gites - dodanie pól adresowych w userrach - nie robil ich we froncie wiec nie widac (mozna potem zrobic) tylko w bazie. edycja tych pol i zapobieganie ich powielaniu przy aktualizacji
+Filmik 36
+1) cały czas wywala mi blad csrf -> w kodzie wszystkojest alenadaljest zakomentowane, potem sie tym zajme
+
+FILMIK 37
+1) realizacja zamowien, odblokowanie przycisku przejdz do platnosci, wyswietlenie calej listy zamowien, ilosci,ceny i produtkow
