@@ -22,7 +22,7 @@
       </div>
       
     </div>
-<table class="table table-striped">
+<table class="table table-striped shadow-sm" style="background-color:white; border-radius:12px">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -41,10 +41,14 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->surname }}</td>
             <td>{{ $user->phone_number }}</td>
-            <td>
-                <a href="{{ route('users.edit', $user->id) }}"> 
-                  <button class="btn btn-success btn-sm"><i class="fa fa-pen-to-square"></i></button> </a>
-                <button class="btn btn-danger bt-sm delete" data-id="{{ $user->id }}"><i class="fa fa-square-minus"></i></button>
+
+            <td style="max-width:70px">
+              <a href="{{ route('users.edit', $user->id) }}">
+                 <button class="btn btn-success btn-sm"><i class="fa fa-pen-to-square"></i></button> </a>
+                
+              <button class="btn btn-danger btn-sm delete" data-id="{{ $user->id }}"><i class="fa fa-square-minus"></i>
+                
+              </button>
             </td>
         </tr>
         @endforeach

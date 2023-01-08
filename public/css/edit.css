@@ -1,0 +1,148 @@
+
+/* resources>> layouts>> app.blade.php */
+.navbar-brand{
+    font-size: 22px !important;
+}
+
+.dropdown-menu > a:hover {
+    background-image: none;
+    background-color: #FFA3AE !important;
+}
+
+body{
+    background-image: none;
+    background-color: #F7E7E8 !important;
+    background-attachment: fixed;
+}
+
+
+
+.border-0{
+    border-width: 18px !important; 
+    padding: 8px !important;
+}
+
+.btn-dark{
+    border: 0px !important;
+
+}
+
+.btn-md{
+    padding: 10px 20px !important;
+    border: none !important;
+}
+
+
+/* resources>> views>> welcome.blade.php  */
+.add-cart-button{
+    background-color: #1a1919 !important;
+    padding: 8px !important;
+    font-size: 16px !important;
+}
+
+
+.add-cart-button:hover {
+    border: 0px !important;
+    background-color: #FFA3AE !important;
+
+}
+
+
+.btn-secondary{
+    background-color: #FFA3AE !important;
+    padding: 8px !important;
+    font-size: 16px !important;
+}
+
+.btn-secondary:hover{
+    background-color: #1a1919 !important;
+    padding: 8px !important;
+    font-size: 16px !important;
+}
+
+/* Logowanie, rejestracja */
+
+.col-md-8>  .btn-primary{
+    background-color: #FFA3AE !important;
+    padding: 8px !important;
+    font-size: 16px !important;
+    border: none !important;
+}
+
+.col-md-8> .btn-primary:hover{
+    background-color: #1a1919 !important;
+    padding: 8px !important;
+    font-size: 16px !important;
+    border: none !important;
+}
+
+
+.col-md-6>  .btn-primary{
+    background-color: #FFA3AE !important;
+    padding: 8px !important;
+    font-size: 16px !important;
+    border: none !important;
+}
+
+.col-md-6> .btn-primary:hover{
+    background-color: #1a1919 !important;
+    padding: 8px !important;
+    font-size: 16px !important;
+    border: none !important;
+}
+
+
+.btn-info{
+    padding: 8px !important;
+    font-size: 16px !important;
+}
+
+#filter-button:hover{
+    background-color: #1a1919 !important;
+}
+
+form> h3 {
+    padding-top: 15px !important;
+    font-size: 1.25rem !important
+}
+
+.my-category{
+    background-color: #FFFF;
+    border-radius: 12px;
+    border: 2px #FFFF solid !important;
+    padding: 10px;
+}
+
+div> .divider {
+    border-color: white !important;
+}
+
+.sorting{
+    opacity: 0;
+    margin: 0px !important;
+}
+
+/* resources>> views>> orders>>  index.blade.php */
+.table-stripped{
+    padding: 20px white !important;
+    
+}
+
+
+.table{
+    
+    border: 30px rgba(255, 0, 0, 0) !important;
+    
+}
+
+.my-text-1 {
+    color: black !important;
+    font-weight: bold;;
+}
+
+.my-text-2 {
+    color: black !important;
+    font-weight: bold;;
+}
+
+

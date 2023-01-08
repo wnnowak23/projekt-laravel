@@ -12,10 +12,10 @@
                             <div class="dropdown">
                                 <a class="btn btn-lg btn-light dropdown-toggle products-actual-count" data-bs-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false" >5</a>
                                 <div class="dropdown-menu dropdown-menu-right products-count" aria-labelledby="navbarDropdown" x-placement="bottom-end" style="will-change: transform; position: absolute; transform: translate3d(120px, 48px, 0px); top: 0px; left: 0px;">
-                                   <a class="dropdown-item" href="#">5</a>
-                                        <a class="dropdown-item" href="#">10</a>
-                                             <a class="dropdown-item" href="#">15</a>
-                                                <a class="dropdown-item" href="#">20</a>
+                                    <a class="dropdown-item" href="#">5</a>
+                                    <a class="dropdown-item" href="#">10</a>
+                                    <a class="dropdown-item" href="#">15</a>
+                                    <a class="dropdown-item" href="#">20</a>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,8 @@
                 </div>
             </div>
             <form class="col-md-4 order-md-1 col-lg-3 sidebar-filter">
-                <h3 class="mt-0 mb-5">{{ __('shop.welcome.products') }} <span class="text-primary">{{ count($products) }}</span></h3>
+                <h3 class="mt-0 mb-3"> W magazynie <span class="text-primary">{{ count($products) }}</span></h3>
+                <div class="my-category -sm"> 
                 <h6 class="text-uppercase font-weight-bold mb-3">{{ __('shop.welcome.categories') }}</h6>
                 @foreach($categories as $category)
                     <div class="mt-2 mb-2 pl-2">
@@ -74,15 +75,16 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="divider mt-5 mb-5 border-bottom border-secondary"></div>
-                <h6 class="text-uppercase mt-5 mb-3 font-weight-bold">{{ __('shop.welcome.price') }}</h6>
+                
+                <h6 class="text-uppercase mt-4 mb-3 font-weight-bold">{{ __('shop.welcome.price') }}</h6>
                 <div class="price-filter-control">
                     <input type="number" class="form-control w-50 pull-left mb-2" placeholder="50" name="filter[price_min]" id="price-min-control">
                     <input type="number" class="form-control w-50 pull-right" placeholder="150" name="filter[price_max]" id="price-max-control">
                 </div>
                 <input id="ex2" type="text" class="slider " value="50,150" data-slider-min="10" data-slider-max="200" data-slider-step="5" data-slider-value="[50,150]" data-value="50,150" style="display: none;">
-                <div class="divider mt-5 mb-5 border-bottom border-secondary"></div>
-                <a href="#" class="btn btn-lg btn-block btn-primary mt-5" id="filter-button"><i class="fa fa-magnifying-glass"></i> {{ __('shop.welcome.filter') }}</a>
+                <div class="divider mt-3 mb-5 border-bottom border-secondary"></div>
+                <a href="#" class="btn btn-md btn-block btn-secondary mt-3" id="filter-button" style="margin:auto; text-align:center; display:block;> <i class="fa fa-magnifying-glass"></i> {{ __('shop.welcome.filter') }}</a>
+            </div>
             </form>
         </div>
     </div>

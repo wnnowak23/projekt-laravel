@@ -20,12 +20,12 @@
     </div>
     <div class="col-6">
       <a class="float-right" href="{{ route ('products.create') }}">
-      <button type="button" class="btn btn-primary"> <i class="fa fa-plus"></i> Dodaj</button>
+      <button type="button" class="btn btn-dark btn-secondary pull-right"> <i class="fa fa-plus"></i> Dodaj</button>
       </a> 
     </div>
   </div>
   <div class="row">
-<table class="table table-striped">
+  <table class="table table-striped shadow-sm" style="background-color:white; border-radius:12px">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -48,7 +48,7 @@
             <td> @if($product->hasCategory()) {{ $product->category->name }}
               @endif
             </td>
-            <td>
+            <td style="max-width:70px">
               <a href="{{ route('products.show', $product->id) }}">
                 <button class="btn btn-primary btn-sm"><i class="fa fa-magnifying-glass"></i>
                   

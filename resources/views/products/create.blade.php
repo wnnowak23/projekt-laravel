@@ -42,20 +42,17 @@
                     <div class="row mb-3">
                         <label for="amount" class="col-md-4 col-form-label text-md-end">{{ __('shop.product.fields.amount') }}</label>
 
-                    <div class="col-md-6">
-                        <input id="amount" type="number" min="0" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount') }}" required autocomplete="amount" autofocus>
+                        <div class="col-md-6">
+                            <input id="amount" type="number" min="0" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount') }}" required autocomplete="amount" autofocus>
 
-                        @error('amount')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                            @error('amount')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                     </div>
-                </div>
-
-                        
-
-
+                    
                         <div class="row mb-3">
                             <label for="price" class="col-md-4 col-form-label text-md-end">{{ __('shop.product.fields.price') }}</label>
 
@@ -106,14 +103,13 @@
 
                         
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('shop.button.save')}}
+                        <div class="col-md-6" style="width:100%">
+                            <button type="submit" class="btn btn-md btn-block btn-secondary mt-3" id="filter-button" style="margin:auto; text-align:center; display:block;" >
+                                {{ __('shop.button.save')}}
                                     
-                                </button>
-                            </div>
+                            </button>
                         </div>
+
                     </form>
                 </div>
             </div>

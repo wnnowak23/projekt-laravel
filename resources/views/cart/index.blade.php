@@ -20,55 +20,60 @@
   </div>
 @endif
 
-<div class="cart_section">
+<div class="cart_section" style="padding-right:30px">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-                <div class="cart_container">
+        <div class="row" style="justify-content: center">
+            <div class="col-lg-10 ">
+                <div class="cart_container" >
                     <div class="cart_title">Koszyk<small> ({{ $cart->getItems()->count() }}) </small></div>
                     <form action="{{ route('orders.store')}}" method="POST" id="order-form">
                         @csrf 
-                    <div class="cart_items">
-                        <ul class="cart_list">
-                            @foreach($cart->getItems() as $item)
-                                    <li class="cart_item clearfix">
-                                        <div class="cart_item_image"><img src="{{ $item->getImage() }}" alt="Zdjęcie produktu"></div>
-                                        <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
-                                            <div class="cart_item_name cart_info_col">
-                                                <div class="cart_item_title">Nazwa</div>
-                                                <div class="cart_item_text">{{ $item->getName() }}</div>
-                                            </div>                                            
-                                            <div class="cart_item_quantity cart_info_col">
-                                                <div class="cart_item_title">Ilość</div>
-                                                <div class="cart_item_text">{{ $item->getQuantity() }}</div>
-                                            </div>
-                                            <div class="cart_item_price cart_info_col">
-                                                <div class="cart_item_title">Cena [PLN]</div>
-                                                <div class="cart_item_text">{{ $item->getPrice() }}</div>
-                                            </div>
-                                            <div class="cart_item_total cart_info_col">
-                                                <div class="cart_item_title">Suma [PLN]</div>
-                                                <div class="cart_item_text">{{ $item->getSum() }}</div>
-                                            </div>
-                                            <div class="cart_info_col">
-                                                <button type="button" class="btn btn-danger btn-sm delete" data-id="{{ $item->getProductId() }}">
-                                                    <i class="fa fa-square-minus"></i>                
-                                            </button>
-                                            </div>
-                                        </div>
-                                    </li>
-                            @endforeach
-                        </ul>
+                    
+
+                    <div style="width:100%">
+                        <table class="table  shadow-sm" style=" background-color: white; border-radius:12px; margin:12px; width:100%">
+                            <thead>
+                            <tr>
+                                <th scope="col">Zdjęcie</th>
+                                <th scope="col">Nazwa</th>
+                                <th scope="col">Ilość</th>
+                                <th scope="col">Cena [PLN]</th>
+                                <th scope="col">Suma [PLN]</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($cart->getItems() as $item)
+                                <tr style="box-sizing: content-box; width: 100%;border-left: solid #FFFF 10px; border-right: solid #FFFF 10px;">
+                                <td class="cart_item_image " ><img src="{{ $item->getImage() }}" alt="Zdjęcie produktu"></td>
+                                    
+                                    <td>{{ $item->getName() }}</td>
+                                    <td>{{ $item->getQuantity() }}</td>
+
+                                    <td>{{ $item->getPrice() }}</td>
+                                    <td>{{ $item->getSum() }}</td>
+                                    <td class="cart_info_col">
+                                            <button type="button" class="btn btn-danger btn-sm delete" data-id="{{ $item->getProductId() }}">
+                                                <i class="fa fa-square-minus"></i>                
+                                        </button>
+                                    </td>
+                                    
+                                </tr>
+                                <td></td>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="order_total">
-                        <div class="order_total_content text-md-right">
-                            <div class="order_total_title">Suma [PLN]:</div>
-                            <div class="order_total_amount">{{ $cart->getSum() }}</div>
-                        </div>
+
+                    <div class=" pull-right" style="border-radius: 12px; padding:0px; margin-left:auto; margin-right:auto">
+                        
+                        <span class="order_total_title my-text-1">Suma [PLN]:</span>
+                        <span class="order_total_amount">{{ $cart->getSum() }}</span>
+                        
                     </div>
+                    </br>
                     <div class="cart_buttons"> 
-                    <a href="/" class="button cart_button_clear">Kontynuuj zakupy</a> 
-                    <button type="submit" class="button cart_button_checkout" {{ !$cart->hasItems() ? 'disabled' : '' }} >Przejdź do płatności</button> 
+                    <a href="/" class="btn btn-light btn-info">Kontynuuj zakupy</a> 
+                    <button type="submit" class="btn btn-dark add-cart-button" {{ !$cart->hasItems() ? 'disabled' : '' }} >Przejdź do płatności</button> 
                 </div>
             </form>
                 </div>

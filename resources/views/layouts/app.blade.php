@@ -14,21 +14,24 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/cart.css') }}" rel="stylesheet">
+    <link href="{{url('css/edit.css')}}" type="text/css" rel="stylesheet">
     @yield('css-files')
     
     
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-md" >
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    ELECTROFUX
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -61,11 +64,16 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @can('isAdmin')
-                                            <a class="dropdown-item" href="{{ route('users.index') }}"> Użytkownicy </a>
-                                            <a class="dropdown-item" href="{{ route('products.index') }}"> Produkty </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                    @can('isModerator')
+                                        <a class="dropdown-item" href="{{ route('users.index') }}"> Użytkownicy </a>
+                                            
                                     @endcan
+                                    @can('isAdmin')
+                                        <a class="dropdown-item" href="{{ route('products.index') }}"> Produkty </a>
+                                            
+                                    @endcan
+                                    
                                     <a class="dropdown-item" href="{{ route('cart.index') }}"> Koszyk </a>
                                     <a class="dropdown-item" href="{{ route('orders.index') }}"> Zamówienia </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -83,6 +91,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- </div> -->
         </nav>
 
         <main class="py-4">

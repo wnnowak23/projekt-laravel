@@ -117,12 +117,11 @@
                                
                             </div>
                         </div>
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('shop.button.save')}}
-                                </button>
-                            </div>
+                        <div class="col-md-6" style="width:100%">
+                            <button type="submit" class="btn btn-md btn-block btn-secondary mt-3" id="filter-button" style="margin:auto; text-align:center; display:block;" >
+                                {{ __('shop.button.save')}}
+                                    
+                            </button>
                         </div>
                     </form>
                 </div>
